@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import { Header } from "../components/header";
-import { AuthProvider } from "../hooks/auth-context";
-import { UserProvider } from "../hooks/user-context";
+import { Header } from "../src/components/header";
+import { AuthProvider } from "../src/hooks/auth-context";
+import { UserProvider } from "../src/hooks/user-context";
 
 export const metadata = {
   title: 'Finance Assistant',

@@ -1,6 +1,6 @@
 import React from 'react';
-import { LoginForm } from '../../components/login-form';
-import { Header } from '../../components/header';
+import { LoginForm } from '../../src/components/login-form';
+import { Header } from '../../src/components/header';
 
 const LoginPage: React.FC = () => {
   return (

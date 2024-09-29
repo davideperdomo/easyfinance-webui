@@ -1,6 +1,5 @@
 import React from 'react';
-import { FinancialManagement } from '../../components/financial-management';
-import { Header } from '../../components/header';
+import { FinancialManagement } from '../../src/components/financial-management';
 
 const FinanceManagementPage: React.FC = () => {
   return (
