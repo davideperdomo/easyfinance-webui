@@ -8,7 +8,8 @@ import { useIncomes } from '../../hooks/use-incomes-hook';
 import { DeleteOutlined } from '@ant-design/icons';
 import { useBankAccounts } from '../../hooks/use-bank-accounts';
 
-const incomeRepository = new ApiIncomeRepository('http://localhost:8080/api');
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+const incomeRepository = new ApiIncomeRepository(apiUrl);
 
 const UserIncomes: React.FC = () => {
   const { user } = useUser();

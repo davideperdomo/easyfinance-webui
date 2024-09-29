@@ -8,7 +8,7 @@ import { useCreditProducts } from '../../hooks/use-credit-product';
 import { DeleteOutlined } from '@ant-design/icons';
 import { InterestType } from '../../modules/credit-product/domain/interest';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
 const creditProductRepository = new ApiCreditProductRepository(apiUrl);
 
 const UserCreditProducts: React.FC = () => {

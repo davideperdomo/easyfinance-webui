@@ -6,7 +6,8 @@ import { UserId } from '../modules/user/domain/user';
 import { UserFinanceSummary } from '../modules/user/domain/userFinanceSummary';
 import { useUser } from '../hooks/user-context';
 
-const apiUserRepository = new ApiUserRepository('http://localhost:8080/api');
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+const apiUserRepository = new ApiUserRepository(apiUrl);
 
 const Summary: React.FC = () => {
   const { user } = useUser();
