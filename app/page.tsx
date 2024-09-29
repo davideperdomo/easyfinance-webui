@@ -1,7 +1,8 @@
 import React from 'react';
+import Welcome from '../src/components/welcome';
 
 const Home: React.FC = () => {
-  return <h1>Welcome to Next.js with App Router!</h1>;
+  return <Welcome />
 };
 
 export default Home;
