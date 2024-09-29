@@ -7,7 +7,7 @@ import { useUser } from '../../hooks/user-context';
 import { useBankAccounts } from '../../hooks/use-bank-accounts';
 import { DeleteOutlined } from '@ant-design/icons';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
 const bankAccountRepository = new ApiBankAccountRepository(apiUrl);
 
 const UserBankAccounts: React.FC = () => {

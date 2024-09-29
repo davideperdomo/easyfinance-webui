@@ -13,7 +13,8 @@ const StyledForm = styled(Form)`
   margin: auto;
 `;
 
-const userRepository = new ApiUserRepository('http://localhost:8080/api');
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+const userRepository = new ApiUserRepository(apiUrl);
 
 export const SignUpForm: React.FC = () => {
   const { authentication } = useAuth();

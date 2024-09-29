@@ -6,7 +6,8 @@ import { ApiExpenseRepository } from '../../modules/expense/infrastructure/api-e
 import { useUser } from '../../hooks/user-context';
 import { DeleteOutlined } from '@ant-design/icons';
 
-const expenseRepository = new ApiExpenseRepository('http://localhost:8080/api');
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+const expenseRepository = new ApiExpenseRepository(apiUrl);
 
 const UserExpenses: React.FC = () => {
   const { user } = useUser();

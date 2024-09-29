@@ -3,7 +3,7 @@ import { CreditProductPlainData, UserId } from '../modules/credit-product/domain
 import { ApiCreditProductRepository } from '../modules/credit-product/infrastructure/api-credit-product.repository';
 import { useUser } from './user-context';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
 const creditProductRepository = new ApiCreditProductRepository(apiUrl);
 
 export const useCreditProducts = () => {

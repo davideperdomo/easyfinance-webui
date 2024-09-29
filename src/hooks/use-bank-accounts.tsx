@@ -3,7 +3,7 @@ import { BankAccountPlainData, BankAccountUserId } from '../modules/bank-account
 import { ApiBankAccountRepository } from '../modules/bank-account/infrastructure/api-bank-account.repository';
 import { useUser } from './user-context';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
 const bankAccountRepository = new ApiBankAccountRepository(apiUrl);
 
 export const useBankAccounts = () => {

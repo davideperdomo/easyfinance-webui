@@ -22,33 +22,23 @@ export const Header: React.FC = () => {
     router.push('/login');
   };
 
-  return (
-    <StyledMenu mode="horizontal">
-      {!isAuthenticated && (
-        <>
-          <Menu.Item key="login" onClick={() => router.push('/login')}>
-            Login
-          </Menu.Item>
-          <Menu.Item key="sign-up" onClick={() => router.push('/sign-up')}>
-            Sign Up
-          </Menu.Item>
-        </>
-      )}
-      {isAuthenticated && (
-        <>
-          <Menu.Item key="home" onClick={() => router.push('/home')}>
-            Home
-          </Menu.Item>
-          <Menu.Item key="finance-management" onClick={() => router.push('/finance-management')}>
-            Finance Management
-          </Menu.Item>
-          <Menu.Item key="logout">
+  const menuItems = isAuthenticated
+    ? [
+        { key: 'home', label: 'Home', onClick: () => router.push('/home') },
+        { key: 'finance-management', label: 'Finance Management', onClick: () => router.push('/finance-management') },
+        {
+          key: 'logout',
+          label: (
             <Button type="link" onClick={handleLogout}>
               Logout
             </Button>
-          </Menu.Item>
-        </>
-      )}
-    </StyledMenu>
-  );
+          ),
+        },
+      ]
+    : [
+        { key: 'login', label: 'Login', onClick: () => router.push('/login') },
+        { key: 'sign-up', label: 'Sign Up', onClick: () => router.push('/sign-up') },
+      ];
+
+  return <StyledMenu mode="horizontal" items={menuItems} />;
 };
