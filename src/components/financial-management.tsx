@@ -19,7 +19,6 @@ export const FinancialManagement: React.FC = () => {
     { label: 'Credit Products', key: '3', children: <UserCreditProducts /> },
     { label: 'Investment Products', key: '4', children: <p>Feature not available yet, coming soon.</p> },
     { label: 'Bank Accounts', key: '5', children: <UserBankAccounts /> },
-    { label: 'Plan Budget and Allocate Funds', key: '8', children: <p>Feature not available yet, coming soon.</p> },
   ];
 
   return (

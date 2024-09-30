@@ -26,6 +26,7 @@ export const Header: React.FC = () => {
     ? [
         { key: 'home', label: 'Home', onClick: () => router.push('/home') },
         { key: 'finance-management', label: 'Finance Management', onClick: () => router.push('/finance-management') },
+        { key: 'financial-goals', label: 'Financial Goals', onClick: () => router.push('/financial-goals') },
         {
           key: 'logout',
           label: (
